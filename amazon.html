@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <div class="nav-bar">
+
+        <div class="nav-logo button">
+            <img src="data:image/png;base64,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"
+                alt="" class="logo">
+        </div>
+
+        <div class="nav-address button">
+            <p class="add-top">Delivery To</p>
+            <div class="nav-lower"><i class="fa-solid fa-location-dot"></i>
+                <p class="add-lowwer">India</p>
+            </div>
+        </div>
+
+        <div class="nav-search">
+            <select name="all" class="search-bar">
+                <option value="all">All</option>
+            </select>
+
+            <input class="search" type="text" placeholder="Search Amazon">
+            <div class="search-icon"> <i class="fa-solid fa-magnifying-glass"></i></div>
+
+        </div>
+
+        <div class="england button">
+            <div class="eng-icon"><i class="fa-solid fa-flag"></i></div>
+            <select name="england" class="eng-name">
+                <option value="england">En</option>
+            </select>
+        </div>
+
+        <div class="nav-sign button">
+            <p>Hello,sign in</p>
+            <div class="option">
+                <p>Accounts & Lists</p>
+                <select name="" id="">
+                    <option value=""> </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="nav-return button">
+            <p>Returns</p>
+            <div class="option">
+                <p>& Orders</p>
+
+            </div>
+        </div>
+
+        <div class="nav-cart button">
+
+            <div class="option">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p>Cart</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="top-panel">
+
+        <div class="all-logo button">
+            <i class="fa-solid fa-list"></i>
+            All
+        </div>
+
+        <div class="panel-list ">
+            <ul>
+                <a class="buttons">Today's Deal</a>
+                <a class="buttons">Register<a>
+                        <a class="buttons">Prime Video</a>
+                        <a class="buttons">Gift card</a>
+                        <a class="buttons">Customer Care</a>
+                        <a class="buttons">Sell</a>
+            </ul>
+        </div>
+    </div>
+    </div>
+
+    <div class="home">
+
+        <div class="home-bar">
+
+            <p>You are on amazon.com. You can also shop on Amazon India for millions of products with fast local
+                delivery. Click here to go to amazon.in</p>
+        </div>
+    </div>
+    <div class="content">   
+
+        <div class="box">
+            <div class="con">
+                <p>Get your Game On </p>
+                <div class="im"
+                    style="background-image:url('https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/Stores-Gaming/FinalGraphics/Fuji_Gaming_store_Dashboard_card_2x_EN._SY608_CB564799420_.jpg');">
+                </div>
+                <p>Show Gaming</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="con">
+                <p>Get your Game On </p>
+                <div class="im"
+                    style="background-image:url('https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/Stores-Gaming/FinalGraphics/Fuji_Gaming_store_Dashboard_card_2x_EN._SY608_CB564799420_.jpg');">
+                </div>
+                <p>Show Gaming</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="con">
+                <p>Get your Game On </p>
+                <div class="im"
+                    style="background-image:url('https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/Stores-Gaming/FinalGraphics/Fuji_Gaming_store_Dashboard_card_2x_EN._SY608_CB564799420_.jpg');">
+                </div>
+                <p>Show Gaming</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="con">
+                <p>Get your Game On </p>
+                <div class="im"
+                    style="background-image:url('https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/Stores-Gaming/FinalGraphics/Fuji_Gaming_store_Dashboard_card_2x_EN._SY608_CB564799420_.jpg');">
+                </div>
+                <p>Show Gaming</p>
+            </div>
+        </div>
+
+<div class="box">
+            <div class="con">
+                <p>Get your Game On </p>
+                <div class="im"
+                    style="background-image:url('https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/Stores-Gaming/FinalGraphics/Fuji_Gaming_store_Dashboard_card_2x_EN._SY608_CB564799420_.jpg');">
+                </div>
+                <p>Show Gaming</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="con">
+                <p>Get your Game On </p>
+                <div class="im"
+                    style="background-image:url('https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/Stores-Gaming/FinalGraphics/Fuji_Gaming_store_Dashboard_card_2x_EN._SY608_CB564799420_.jpg');">
+                </div>
+                <p>Show Gaming</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="con">
+                <p>Get your Game On </p>
+                <div class="im"
+                    style="background-image:url('https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/Stores-Gaming/FinalGraphics/Fuji_Gaming_store_Dashboard_card_2x_EN._SY608_CB564799420_.jpg');">
+                </div>
+                <p>Show Gaming</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="con">
+                <p>Get your Game On </p>
+                <div class="im"
+                    style="background-image:url('https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/Stores-Gaming/FinalGraphics/Fuji_Gaming_store_Dashboard_card_2x_EN._SY608_CB564799420_.jpg');">
+                </div>
+                <p>Show Gaming</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="con">
+                <p>Get your Game On </p>
+                <div class="im"
+                    style="background-image:url('https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/Stores-Gaming/FinalGraphics/Fuji_Gaming_store_Dashboard_card_2x_EN._SY608_CB564799420_.jpg');">
+                </div>
+                <p>Show Gaming</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="con">
+                <p>Get your Game On </p>
+                <div class="im"
+                    style="background-image:url('https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/Stores-Gaming/FinalGraphics/Fuji_Gaming_store_Dashboard_card_2x_EN._SY608_CB564799420_.jpg');">
+                </div>
+                <p>Show Gaming</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="con">
+                <p>Get your Game On </p>
+                <div class="im"
+                    style="background-image:url('https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/Stores-Gaming/FinalGraphics/Fuji_Gaming_store_Dashboard_card_2x_EN._SY608_CB564799420_.jpg');">
+                </div>
+                <p>Show Gaming</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="con">
+                <p>Get your Game On </p>
+                <div class="im"
+                    style="background-image:url('https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/Stores-Gaming/FinalGraphics/Fuji_Gaming_store_Dashboard_card_2x_EN._SY608_CB564799420_.jpg');">
+                </div>
+                <p>Show Gaming</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="back-panel">
+        <p>Back to Top</p>
+    </div>
+
+    <div class="footer">
+        <div class="list1">
+            <a>Get to Know Us</a>
+            <a>Careers</a>
+            <a>Blog</a>
+            <a>About Amazon</a>
+            <a>Investor Relations</a>
+            <a>Amazon Devices</a>
+            <a>Amazon Science</a>
+        </div>
+
+        <div class="list1">
+        <a>  Make Money with Us</a>
+<a>Sell products on Amazon</a>
+<a>Sell on Amazon Business</a>
+<a>Sell apps on Amazon</a>
+<a>Become an Affiliate</a>
+<a>Advertise Your Products</a>
+<a>Self-Publish with Us</a>
+<a>Host an Amazon Hub</a>
+›<a>See More Make Money with Us</a>
+        </div>
+
+        <div class="list1">
+           <a>Amazon Payment Products</a>
+           <a>Amazon Business Card</a>
+           <a>Shop with Points</a>
+           <a>Reload Your Balance</a>
+           <a>Amazon Currency Converter</a>
+
+        </div>
+
+        <div class="list1">
+           <a></a>Let Us Help You</a>
+           <a>Amazon and COVID-19</a>
+           <a>Your Account</a>
+           <a>Your Orders</a>
+           <a>Shipping Rates & Policies</a>
+           <a>Returns & Replacements</a>
+Manage Your Content and Devices
+Help
+
+        </div>
+    </div>
+
+</body>
+
+</html>
