@@ -1,4 +1,4 @@
-# 🛒 Amazon Clone (HTML & CSS)
+[# 🛒 Amazon Clone (HTML & CSS)
 
 A responsive front-end clone of the Amazon homepage built using only **HTML** and **CSS**. This project replicates the structure and visual design of Amazon to help practice layout, styling, and responsive design techniques.
 
@@ -43,3 +43,4 @@ cd amazon-clone
 You can simply double-click the file or use Live Server in VS Code.
 
 
+video link:   https://drive.google.com/file/d/1ewDXphWAQP4zV1MnEXCe4ftQybowVGUJ/view?usp=drive_link
